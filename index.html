@@ -1,0 +1,97 @@
+<!--
+    Benjamin Shen
+    Web Development Even 7/8
+    11/23/22
+    Level 1 Count De Money
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count De Money</title>
+    <script src = "countdemoney.js"></script>
+    <script>
+        function initialize() {
+            pennyOutput = document.getElementById("penny");
+            pennyValOutput = document.getElementById("pennyVal");
+            nickelOutput = document.getElementById("nickel");
+            nickelValOutput = document.getElementById("nickelVal");
+            dimeOutput = document.getElementById("dime");
+            dimeValOutput = document.getElementById("dimeVal");
+            quarterOutput = document.getElementById("quarter");
+            quarterValOutput = document.getElementById("quarterVal");
+            totalOutput = document.getElementById("total");
+
+            formatter = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
+
+            penny = 0;
+            pennyVal = 0;
+            nickel = 0;
+            nickelVal = 0;
+            dime = 0;
+            dimeVal = 0;
+            quarter = 0;
+            quarterVal = 0;
+            total = 0;
+
+            display();
+        }
+
+        function display() {
+            pennyOutput.innerHTML = penny;
+            pennyValOutput.innerHTML = pennyVal;
+            nickelOutput.innerHTML = nickel;
+            nickelValOutput.innerHTML = nickelVal;
+            dimeOutput.innerHTML = dime;
+            dimeValOutput.innerHTML = dimeVal;
+            quarterOutput.innerHTML = quarter;
+            quarterValOutput.innerHTML = quarterVal;
+            totalOutput.innerHTML = total;
+        }
+    </script>
+    <style>
+        button {
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body onload = "initialize();">
+    <h1> Count de Money </h1>
+    <hr>
+    <div>
+        <h3> Number of Pennies: <span id = "penny"></span></h3>
+        <h3> Value of Pennies: $<span id = "pennyVal"></span></h3>
+        <button onclick = "addPenny();"> Add 1 </button>
+        <button onclick = "subtractPenny();"> Subtract 1 </button>
+    </div>
+    <hr>
+    <div>
+        <h3> Number of Nickels: <span id = "nickel"></span></h3>
+        <h3> Value of Nickels: $<span id = "nickelVal"></span></h3>
+        <button onclick = "addNickel();"> Add 1 </button>
+        <button onclick = "subtractNickel();"> Subtract 1 </button>
+    </div>
+    <hr>
+    <div>
+        <h3> Number of Dimes: <span id = "dime"></span></h3>
+        <h3> Value of Dimes: $<span id = "dimeVal"></span></h3>
+        <button onclick = "addDime();"> Add 1 </button>
+        <button onclick = "subtractDime();"> Subtract 1 </button>
+    </div>
+    <hr>
+    <div>
+        <h3> Number of Quarters: <span id = "quarter"></span></h3>
+        <h3> Value of Quarters: $<span id = "quarterVal"></span></h3>
+        <button onclick = "addQuarter();"> Add 1 </button>
+        <button onclick = "subtractQuarter();"> Subtract 1 </button>
+    </div>
+    <hr>
+    <div>
+        <h2> Total: $<span id = "total"></span></h2>
+    </div>
+</body>
+</html>
