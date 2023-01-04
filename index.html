@@ -38,12 +38,6 @@
             total = 0;
 
             display();
-            
-            function addPenny() {
-                 penny++;
-                 addPennyVal();
-                 display();
-            }
         }
 
         function display() {
@@ -56,6 +50,12 @@
             quarterOutput.innerHTML = quarter;
             quarterValOutput.innerHTML = quarterVal;
             totalOutput.innerHTML = total;
+        }
+        
+        function addPenny() {
+                 penny++;
+                 addPennyVal();
+                 display();
         }
     </script>
     <style>
